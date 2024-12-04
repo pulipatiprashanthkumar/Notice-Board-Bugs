@@ -1,3 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
+/* 
+a, button{
+    color:whitesmoke !important; 
+    text-transform: lowercase !important;
+    background-color: blueviolet !important;
+} */

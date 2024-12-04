@@ -1,0 +1,22 @@
+h1{
+    font-weight: bolder;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+label{
+    font-weight: bolder;
+}
+
+input,textarea{
+    border-radius: 10px;
+    border: 2px solid  greenyellow;
+}
+
+button{
+    border-radius: 10px;
+    text-transform: capitalize;
+    color: black;
+    font-weight: bolder;
+    padding: 10px;
+}

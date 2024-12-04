@@ -1,0 +1,25 @@
+div{
+    padding: 10px;
+   }
+   
+   /* Center the greeting message */
+   .greeting-container {
+     flex-grow: 1;  /* Take up available space */
+     text-align: center;  /* Center the text */
+     font-size: 18px;
+     font-weight: bold;
+   }
+   
+   /* Position the timer on the right */
+   .timer-container {
+     margin-left: auto;  /* Push the timer to the right */
+     font-size: 18px;
+     font-weight: bold;
+   }
+   
+  
+  /* Highlight table row on hover */
+table.table tr:hover {
+  background-color:cornflowerblue; /* Light grey or any color you prefer */
+  cursor: pointer; /* Optional: Change cursor to indicate interactivity */
+}

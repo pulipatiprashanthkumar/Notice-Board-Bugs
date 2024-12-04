@@ -1,28 +1,46 @@
-<div class="container">
-    <h1>Notice board</h1>
+
+<div>
+<div class="navbar-container">
+  <nav class="navbar navbar-light bg-light fixed-top">
+    <h1 class="notice">Notice board</h1>
     
-    <a href="#" routerLink="/post/create/" class="btn btn-success">Create NEW Post</a>
-      
-    <table class="table table-striped">
-        <thead>
-              <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Body</th>
-                <th width="250px">Action</th>
-              </tr>
-        </thead>
-        <tbody>
-              <tr *ngFor="let post of posts">
-                <td>{{ post.id }}</td>
-                <td>{{ post.title | uppercase }}</td>
-                <td>{{ post.body }}</td>
-                <td>
-                  <a href="#" [routerLink]="['/post/', post.id, 'view']" style="margin-right:5px" class="btn btn-info">VieW</a>
-                  <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary" style="margin-right:5px">EdIt</a>
-                  <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">DELETE</button>
-                </td>
-              </tr>
-        </tbody>
-    </table>
- </div>
+    <!-- Welcome message in the center of the navbar -->
+    <div class="greeting-container">
+      <span>{{ greeting }}</span>
+    </div>
+    
+    <!-- Timer shown on the right side of the navbar -->
+    <div class="timer-container">
+      <span>{{ timer }}</span>
+    </div>
+  </nav>
+</div>
+
+</div>
+<br> <br>
+<a href="#" routerLink="/post/create/" class="btn btn-success">Create NEW Post</a>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th width="250px">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td>{{ post.id }}</td>
+        <td>{{ post.title | uppercase }}</td>
+        <td>{{ post.body }}</td>
+        <td>
+          <a href="#" [routerLink]="['/post/', post.id, 'view']" style="margin-right:5px" class="btn btn-info">VieW</a>
+          <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary" style="margin-right:5px">EdIt</a>
+          <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">{{'DELETE'|camelCase}}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
